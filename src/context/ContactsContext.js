@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, createContext } from 'react';
+import { useContext, useState, useEffect, createContext } from 'react';
 import {
   createContactRealm,
   readAllContacts,
