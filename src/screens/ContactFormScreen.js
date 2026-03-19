@@ -8,8 +8,8 @@ const ContactFormScreen = ({ navigation, route }) => {
   const { addContact, editContact } = useContactsContext();
 
   const onSubmit = newContact => {
-    if (contact.id !== undefined) {
-      editContact(contact.id, newContact);
+    if (contact._id !== undefined) {
+      editContact(contact._id, newContact);
     } else {
       addContact(newContact);
     }

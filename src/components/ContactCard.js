@@ -30,7 +30,7 @@ const ContactCard = ({ contact }) => {
           size={20}
           accessibilityLabel="Remove contact"
           onPress={() => {
-            removeContact(contact.id);
+            removeContact(contact._id);
             navigation.navigate('ContactList');
           }}
         />
