@@ -2,6 +2,7 @@ import { View } from 'react-native';
 import ContactForm from '../components/ContactForm';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useContactsContext } from '../context/ContactsContext';
+
 const ContactFormScreen = ({ navigation, route }) => {
   const insets = useSafeAreaInsets();
   const { contact } = route.params;

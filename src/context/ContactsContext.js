@@ -56,6 +56,8 @@ export const ContactsProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    if (!isOnline) return;
+
     syncContacts();
     const intervalId = setInterval(() => {
       syncContacts();
@@ -71,7 +73,6 @@ export const ContactsProvider = ({ children }) => {
   const editContact = (_id, newData) => {
     const updatedData = { ...newData, isSynced: false };
     updateContactRealm(_id, updatedData);
-
     setContacts(prev =>
       prev.map(c => (c._id === _id ? { ...c, ...updatedData } : c)),
     );
